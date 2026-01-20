@@ -1,0 +1,136 @@
+/* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fond général */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: aliceblue;
+  background-attachment: fixed;
+  color: #130369;
+  margin-bottom: 150px;
+}
+
+/* Barre blanche du haut */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Tableau des compétences et soft skills */
+section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+
+
+/* Menu */
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #030113;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #030011;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Section principale */
+.top-page {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+/* Partie titre */
+h1 {
+  background: white;
+  max-width: 850px;
+  width: 90%;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  font-size: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Partie paragraphe */
+.paragraphe {
+  background: white;
+  max-width: 850px;
+  width: 90%;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.contact-info {
+  background: white;
+  max-width: 850px;
+  width: 90%;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.ecriture-contact {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
