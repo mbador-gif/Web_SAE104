@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
 }
 
 /* Fond général */
@@ -11,12 +11,12 @@ body {
   background-color: aliceblue;
   background-attachment: fixed;
   color: #130369;
-  margin-bottom: 150px;
+  margin-bottom: 40px;
 }
 
 /* Barre blanche du haut */
 header {
-  position: fixed;
+  position: fixed; /* empêche le défilement */
   top: 0;
   width: 100%;
   height: 80px;
@@ -26,6 +26,7 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  border: 2px solid rgb(14, 14, 119);
 }
 
 /* Tableau des compétences et soft skills */
@@ -58,7 +59,7 @@ nav {
 nav a {
   text-decoration: none;
   font-weight: 600;
-  color: #030113;
+  color:#130369;
   position: relative;
 }
 
@@ -69,7 +70,7 @@ nav a::after {
   bottom: -6px;
   width: 0%;
   height: 2px;
-  background: #030011;
+  background:#130369;
   transition: width 0.3s ease;
 }
 
@@ -79,7 +80,7 @@ nav a:hover::after {
 
 /* Section principale */
 .top-page {
-  padding-top: 200px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,6 +99,7 @@ h1 {
   font-size: 2.4rem;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid rgb(14, 14, 119);
 
 }
 
@@ -113,24 +115,117 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  border: 2px solid rgb(14, 14, 119);
 }
 
+/* Section contact */
 .contact-info {
-  background: white;
-  max-width: 850px;
-  width: 90%;
-  padding: 30px;
-  text-align: center;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
 }
 
 .ecriture-contact {
-  font-size: 1.2rem;
-  line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ecriture-contact p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.ecriture-contact a {
+    color: #6c63ff;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.ecriture-contact a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #6c63ff;
+    transition: width 0.3s ease;
+}
+
+.ecriture-contact a:hover {
+    color: #4facfe;
+}
+
+.ecriture-contact a:hover::after {
+    width: 100%;
+}
+
+
+/* Logo CV */
+.logo-cv {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 10;
+}
+
+.logo-cv a { /* Partie bouton*/
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid rgb(14, 14, 119);
+    transition: all 0.3s ease;
+}
+
+.logo-cv img { /* Partie logo */
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.logo-cv p { /* Partie texte */
+    color: #130369;
+    font-weight: 600;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.logo-cv a:hover {
+    transform: translateY(-8px);  /* Animation au survol */
+}
+
+/* Logo Home */
+.logo-home {
+    position: fixed;          /* reste visible même en scroll */
+    top: 10px;
+    left: -8px;
+    z-index: 1000;
+}
+
+.logo-home img {
+    width: 110px;
+    height: 60px;
 }
 
 
